@@ -1,0 +1,12 @@
+# Кодировка utf-8
+AddDefaultCharset utf-8
+
+Options +FollowSymLinks
+RewriteEngine on # Механизм рутера
+
+# Перенаправление всех запросов на index.php
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+
+RewriteRule ^ index.php [L]
+
